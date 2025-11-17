@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/lib/modules/6.12.58-1-lts/build/arch/x86/include/generated/",
+                "/usr/lib/modules/6.12.58-1-lts/build/arch/x86/include/",
+                "/usr/lib/modules/6.12.58-1-lts/build/include/"
+            ],
+            "defines": [],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-clang-x64"
+        }
+    ],
+    "version": 4
+}
