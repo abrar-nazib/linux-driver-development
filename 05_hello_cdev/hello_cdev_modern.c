@@ -53,6 +53,7 @@ static int mod_init(void)
 
     // Step 4: Create a class (appears in /sys/class/)
     my_class = class_create(CLASS_NAME);
+        // Modern way: class_create(THIS_MODULE, "name")
     if (IS_ERR(my_class))
     {
         pr_err("%s: Could not create class\n", mod_name);
