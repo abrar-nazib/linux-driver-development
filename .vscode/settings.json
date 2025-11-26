@@ -2,6 +2,8 @@
     "files.associations": {
         "module.h": "c",
         "init.h": "c",
-        "stringify.h": "c"
+        "stringify.h": "c",
+        "types.h": "c",
+        "device.h": "c"
     }
 }
