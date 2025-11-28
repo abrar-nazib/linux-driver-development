@@ -10,7 +10,7 @@ static ssize_t my_read(struct file *fp, char __user *user_buf, size_t length, lo
 {
     int not_copied, delta, to_copy = (length + *offset) < sizeof(text) ? length : (sizeof(text) - *offset);
     pr_info("hello_cdev: Read is called, we want to read %ld bytes, but actually only copying %d bytes. The offset is %lld\n", length, to_copy, *offset);
-    if (*offset >= sizeof((text)))
+    if (*offset >= sizeof(text))
         return 0;
 
     not_copied = copy_to_user(user_buf, &text[*offset], to_copy);
@@ -34,7 +34,7 @@ static ssize_t my_write(struct file *fp, const char __user *user_buf, size_t len
     delta = to_copy - not_copied;
     if (not_copied)
         pr_warn("hello_cdev: Could only copy %d bytes\n", delta);
-    offset += delta;
+    *offset += delta;
     return delta;
 }
 

@@ -1,4 +1,4 @@
-obj-m += template.o
+obj-m += simple_ioctl.o
 
 all:
 	make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules
