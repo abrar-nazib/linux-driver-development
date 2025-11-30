@@ -1,0 +1,19 @@
+/dts-v1/; /* Device Tree Source version 1 */
+/plugin/; /* This is not a full device tree, but a fragment(overlay file) */
+
+/{
+
+	fragment@0{
+		target-path = "/"; /* Target the root node of the base device tree */
+		__overlay__ {
+			my_dev_label: my_device@0{
+				compatible = "cortextech,mydev";
+				status = "okay"; /* The device is enabled. Need to put "disable" to disable it */
+				string_var = "Hello, DT!";
+				int_var = <1234>;
+			};
+		};
+	};
+};
+
+
