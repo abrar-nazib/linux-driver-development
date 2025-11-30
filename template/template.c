@@ -2,7 +2,7 @@
 #include <linux/init.h>
 
 
-static char *mod_name = "ioctl";
+static char *mod_name = "";
 
 static int mod_init(void)
 {
